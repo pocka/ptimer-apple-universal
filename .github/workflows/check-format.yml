@@ -16,24 +16,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Go
-        uses: actions/setup-go@v5
-        with:
-          go-version: 1.22.x
-          # In order to suppress "go.sum not found" warning.
-          # This job does not need cache, because only `gofmt` will be used.
-          cache: false
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "22.x"
-      - name: Setup Gleam
-        uses: erlef/setup-beam@v1
-        with:
-          otp-version: "27"
-          gleam-version: "1.4"
-      - name: Install elm-format
-        run: npm i -g elm-format
       - name: Cache swiftformat
         id: cache-swiftformat
         uses: actions/cache@v4

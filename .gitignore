@@ -7,7 +7,6 @@
 #       Use in-memory database or create on-demand for testings.
 *.ptimer
 
-# What: Node.js' dependency directory
-#  Why: Filesize is unnecessary large. Also it might include platform dependent files
-#       such as executables and caches.
-node_modules
+# What: XCode workspace and user settings, temporary data.
+#  Why: Not meaningful. I don't see any benefits including this file.
+xcuserdata/
